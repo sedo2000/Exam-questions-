@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نماذج الأسئلة الامتحانية</title>
+
+  <style>
+    :root{
+      --border:#bfc4c9;
+      --link:#1e73c6;
+      --text:#1a1a1a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background:#ffffff;
+      color:var(--text);
+    }
+
+    /* ===== Splash Screen ===== */
+    .splash{
+      position:fixed;
+      inset:0;
+      background:#000;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:24px;
+      z-index:1000;
+      transition: opacity .4s ease, visibility .4s ease;
+    }
+    .splash.hidden{
+      opacity:0;
+      visibility:hidden;
+    }
+
+    /* نص متدرّج هادئ */
+    .splash h1{
+      font-size:20px;
+      line-height:1.9;
+      margin:0 0 28px;
+      max-width:650px;
+
+      background: linear-gradient(
+        135deg,
+        #e6edf3,  /* رمادي أزرق فاتح */
+        #cfd8dc,  /* رمادي هادئ */
+        #e0e0e0   /* فضي باهت */
+      );
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+
+    .splash button{
+      background:#fff;
+      color:#000;
+      border:none;
+      padding:14px 28px;
+      font-size:16px;
+      font-weight:700;
+      border-radius:6px;
+      cursor:pointer;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .splash button:hover{
+      transform:translateY(-1px);
+      opacity:.92;
+    }
+
+    /* ===== Main ===== */
+    .wrap{
+      max-width:900px;
+      margin:22px auto;
+      padding:0 14px 28px;
+    }
+    .panel{
+      border:1px solid var(--border);
+      background:#fff;
+      overflow:hidden;
+    }
+    .item{
+      display:block;
+      padding:26px 18px;
+      text-decoration:none;
+      text-align:center;
+      border-bottom:1px solid var(--border);
+      transition: transform .12s ease, filter .12s ease;
+    }
+    .item:last-child{ border-bottom:none; }
+    .item:hover{
+      filter:brightness(.97);
+      transform:translateY(-1px);
+    }
+    .title{
+      display:inline-block;
+      font-weight:700;
+      line-height:1.9;
+      font-size:20px;
+      color:var(--link);
+      letter-spacing:.2px;
+    }
+    .hint{
+      margin:12px 0 0;
+      text-align:center;
+      font-size:13px;
+      opacity:.75;
+    }
+
+    /* ===== ألوان حسب السنة (هادئة) ===== */
+    .y2024{ background:#eef2f6; }
+    .y2023{ background:#f3eee6; }
+    .y2022{ background:#edf2ef; }
+    .y2021{ background:#f2ecec; }
+
+    @media (max-width:560px){
+      .title{ font-size:17px; }
+      .item{ padding:20px 14px; }
+      .splash h1{ font-size:17px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Splash -->
+  <div class="splash" id="splash">
+    <h1>
+      تم إنشاء هذا الموقع لغرض تسهيل على الطلبة<br>
+      معاينة الأسئلة الامتحانية بشكل مباشر ومنظم
+    </h1>
+    <button onclick="enterSite()">عرض أسئلة الامتحانات</button>
+  </div>
+
+  <!-- Content -->
+  <div class="wrap">
+    <div class="panel">
+
+      <!-- 2024_2025 -->
+      <a class="item y2024" href="https://cloud.uobasrah.edu.iq/uploads/2025/08/26/3976%20%D8%A7%D9%84%D9%83%D9%88%D8%B1%D8%B3%D9%8A%D9%86%20%D9%84%D9%84%D9%85%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%D9%89.pdf" target="_blank" rel="noopener">
+        <span class="title">اسئلة الامتحانات النهائية للمرحلة الاولى للفصلين الاول و الثاني - الدور الاول للعام الدراسي 2024_2025</span>
+      </a>
+
+      <a class="item y2024" href="https://cloud.uobasrah.edu.iq/uploads/2025/07/13/7156%20%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D8%AD%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D9%88%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%D8%A9.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الفصل الثاني - الدور الأول للعام الدراسي 2024_2025 للمراحل (الثانية - الثالثة - الرابعة)</span>
+      </a>
+
+      <a class="item y2024" href="https://cloud.uobasrah.edu.iq/uploads/2025/01/12/6920%20%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D8%A9%20%D8%A7%D9%84%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%20%D8%A7%D9%84%D8%AF%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%88%D8%B1%20(1).pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الفصل الاول - الدور الأول للعام الدراسي 2024_2025</span>
+      </a>
+
+      <!-- 2023_2024 -->
+      <a class="item y2023" href="https://cloud.uobasrah.edu.iq/uploads/2024/08/14/7308%20%D8%A7%D9%84%D8%AF%D9%88%D8%B1%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%AC%20%D9%83%D9%A2.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الفصل الثاني - الدور الثاني للعام الدراسي 2023_2024</span>
+      </a>
+
+      <a class="item y2023" href="https://cloud.uobasrah.edu.iq/uploads/2024/08/14/6180%20%D8%A7%D9%84%D8%AF%D9%88%D8%B1%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%AC%20%D9%83%D9%A1%20(1).pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الفصل الاول - الدور الثاني للعام الدراسي 2023_2024</span>
+      </a>
+
+      <a class="item y2023" href="https://cloud.uobasrah.edu.iq/uploads/2024/08/14/6934%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D8%AF%D9%88%D8%B1%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%20%D8%AC.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الفصل الثاني - الدور الأول للعام الدراسي 2023_2024</span>
+      </a>
+
+      <a class="item y2023" href="https://cloud.uobasrah.edu.iq/uploads/2024/08/14/8531%20%D8%A7%D8%A7%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%20%D8%A7%D9%84%D8%AF%D9%88%D8%B1%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%20%D8%AC.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الفصل الاول - الدور الأول للعام الدراسي 2023_2024</span>
+      </a>
+
+      <!-- 2022_2023 -->
+      <a class="item y2022" href="https://cloud.uobasrah.edu.iq/uploads/2023/09/25/9172_%D8%A7%D9%84%D8%A7%D8%B3%D8%A6%D9%84%D8%A9_%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D9%8A%D8%A9_%D9%84%D9%84%D8%AF%D9%88%D8%B1_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A_%D9%A2%D9%90%D9%A2%D9%A2_%D9%A2%D9%90%D9%A2%D9%A3.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية - الدور الثاني للعام الدراسي 2022_2023</span>
+      </a>
+
+      <a class="item y2022" href="https://cloud.uobasrah.edu.iq/uploads/2023/07/04/3699%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%AB%D8%A7%D9%86%D9%8A%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية للفصل الثاني - الدور الاول للعام الدراسي 2022_2023</span>
+      </a>
+
+      <a class="item y2022" href="https://cloud.uobasrah.edu.iq/uploads/2023/03/13/9655%20%D9%82%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%81%D9%8A%D8%A9.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية للفصل الاول - الدور الاول للعام الدراسي 2022_2023</span>
+      </a>
+
+      <!-- 2021_2022 -->
+      <a class="item y2021" href="https://cloud.uobasrah.edu.iq/uploads/2023/02/05/2977%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%81%D9%8A%D8%A9.pdf" target="_blank" rel="noopener">
+        <span class="title">الاسئلة الامتحانية للعام الدراسي 2021_2022</span>
+      </a>
+
+    </div>
+
+    <div class="hint">كل حقل قابل للضغط بالكامل ويفتح ملف الـ PDF في تبويب جديد.</div>
+  </div>
+
+  <script>
+    function enterSite(){
+      document.getElementById('splash').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
